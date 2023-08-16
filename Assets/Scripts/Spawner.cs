@@ -16,7 +16,9 @@ public class Spawner : MonoBehaviour
 
     void KnifeSpawner()
     {
-        Instantiate(knife, new Vector3(26.1637f, -17.1f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-        
+        GameObject instantiatedObject = Instantiate(knife, new Vector3(26.1637f, -22.7f, 0), Quaternion.Euler(new Vector3(-5.564f, 2.52617f, 52.292f)));
+        instantiatedObject.transform.localScale =  new Vector3(3.09306f, 2.52617f, 2.6f);
+
+
     }
 }
