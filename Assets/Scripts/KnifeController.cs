@@ -1,14 +1,19 @@
 using UnityEngine;
+using DG.Tweening;
+using Unity.Collections.LowLevel.Unsafe;
+
 public class KnifeController : MonoBehaviour
 {
     [SerializeField] public float speed;
+    [SerializeField] public float Number;
+    public Rigidbody2D Knife;
     private bool _collision = false;
     private bool _pressed = false;
     private static string _state;
     void Update()
     {
         _state = GameManager.GetState();
-        if (_state != "Loose")
+        if (_state == "Play")
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -20,14 +25,7 @@ public class KnifeController : MonoBehaviour
 
             }
         }
-        else
-        {
-            GameObject ground = GameObject.FindGameObjectWithTag("Ground");
-            SpriteRenderer spriteRenderer = ground.transform.GetComponent<SpriteRenderer>();
-            spriteRenderer.material.color = Color.red;
-            SpriteRenderer knifeRenderer = GetComponent<SpriteRenderer>();
-            knifeRenderer.material.color = Color.red;
-        }
+
         
     
     }
@@ -35,8 +33,9 @@ public class KnifeController : MonoBehaviour
     {
         if (other.gameObject.tag == "knife")
         {
-            GameManager.ChangeState("Loose");
-        } 
+            GameManager.ChangeState("LoadLoose");
+        }
+        Knife.AddForce(new Vector3(0,Number,0));
     }
     public void CollisionHandler()
     {

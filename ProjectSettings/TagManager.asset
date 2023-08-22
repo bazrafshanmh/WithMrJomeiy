@@ -52,3 +52,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Knife
+    uniqueID: 2316248333
+    locked: 0
+  - name: Circle
+    uniqueID: 3904188579
+    locked: 0

@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+using DG.Tweening;
 public class CollisionHandler : MonoBehaviour
 {
     
@@ -13,8 +13,5 @@ public class CollisionHandler : MonoBehaviour
         other.transform.SetParent(transform);
         KnifeController knifeController = other.gameObject.GetComponent<KnifeController>();
         knifeController.CollisionHandler();
-        Debug.Log("LOG");
-    
-
     }
 }
