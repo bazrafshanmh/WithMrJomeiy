@@ -353,6 +353,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2344244889086310309}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &585686976 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1003714411009578732, guid: ef6bc35a00116a1fdaa03549a4c89a39,
+    type: 3}
+  m_PrefabInstance: {fileID: 3926796437124836018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &896715093
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23632920bd68e270587e8fe2ef6bac25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceEffect: {fileID: 1148964626600798723, guid: a28dcafa81ee1ae4db59cae9b439c8bc,
+    type: 3}
 --- !u!114 &896715097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +896,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1396878509702076708, guid: ef6bc35a00116a1fdaa03549a4c89a39,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.646191
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396878509702076708, guid: ef6bc35a00116a1fdaa03549a4c89a39,
+        type: 3}
       propertyPath: m_LocalScale.y
       value: 3.2292044
       objectReference: {fileID: 0}
@@ -961,6 +974,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 52.292
       objectReference: {fileID: 0}
+    - target: {fileID: 5587537114475314748, guid: ef6bc35a00116a1fdaa03549a4c89a39,
+        type: 3}
+      propertyPath: Knife
+      value: 
+      objectReference: {fileID: 585686976}
     - target: {fileID: 6124440897310055976, guid: ef6bc35a00116a1fdaa03549a4c89a39,
         type: 3}
       propertyPath: m_GravityScale

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     private static string _state;
+    public ParticleSystem LooseEffect;
 
     void Update()
     {
@@ -13,7 +14,9 @@ public class UIManager : MonoBehaviour
         if (_state == "LoadLoose")
         {
             GameManager.ChangeState("Loose");
+            LooseEffect.Play();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
             SceneManager.LoadScene("Loose");
+
         }else if(_state == "LoadMenu")
         {
             GameManager.ChangeState("Menu");

@@ -6,10 +6,14 @@ public class KnifeController : MonoBehaviour
 {
     [SerializeField] public float speed;
     [SerializeField] public float Number;
-    public Rigidbody2D Knife;
     private bool _collision = false;
     private bool _pressed = false;
     private static string _state;
+    private Sprite knifeSprite = KnifeSkinManager.KnifeSkin;
+    void Awake()
+    {
+        GetComponent<SpriteRenderer>().sprite = knifeSprite;
+    }
     void Update()
     {
         _state = GameManager.GetState();
@@ -35,7 +39,7 @@ public class KnifeController : MonoBehaviour
         {
             GameManager.ChangeState("LoadLoose");
         }
-        Knife.AddForce(new Vector3(0,Number,0));
+        
     }
     public void CollisionHandler()
     {
