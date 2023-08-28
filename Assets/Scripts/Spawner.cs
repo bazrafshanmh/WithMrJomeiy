@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     private void OnEnable()
     {
         CollisionHandler.Collision += KnifeSpawner;
+        KnifeSkinManager.KnifeSkin = knife.GetComponent<SpriteRenderer>().sprite;
     }
 
     private void OnDisable()

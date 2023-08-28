@@ -9,7 +9,7 @@ public class KnifeController : MonoBehaviour
     private bool _collision = false;
     private bool _pressed = false;
     private static string _state;
-    private Sprite knifeSprite = KnifeSkinManager.KnifeSkin;
+    private Sprite knifeSprite = Spawner.knife.GetComponent<SpriteRenderer>().sprite;
     void Awake()
     {
         GetComponent<SpriteRenderer>().sprite = knifeSprite;
