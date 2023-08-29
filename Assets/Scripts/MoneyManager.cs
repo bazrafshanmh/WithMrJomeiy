@@ -10,7 +10,13 @@ public class MoneyManager : MonoBehaviour
     
     void OnEnable()
     {
-
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            Coins = PlayerPrefs.GetInt("Score");
+        }else
+        {
+            Coins = 0;
+        }
         CollisionHandler.Collision += moneyHandler;
     }
     
