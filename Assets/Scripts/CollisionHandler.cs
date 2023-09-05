@@ -7,6 +7,9 @@ using UnityEngine.Serialization;
 
 public class CollisionHandler : MonoBehaviour
 {
+
+
+    
     public GameObject IceEffect;
     public GameObject effect1;
     public GameObject effect2;
